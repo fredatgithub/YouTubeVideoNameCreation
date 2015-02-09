@@ -15,19 +15,19 @@ namespace UnitTestProjectApplication
         Assert.IsTrue(result >= 1 && result <= 4);
       }
 
-      result = FormMain.GenerateRandomNumber(0, 4);
+      result = FormMain.GenerateRandomNumber(1, 4);
       Assert.IsFalse(result >= 4);
     }
 
     [TestMethod]
     public void TestGenerateRandomNumberEqualTo1()
     {
-      int result = FormMain.GenerateRandomNumber(0, 4);
+      int result = FormMain.GenerateRandomNumber(1, 4);
       bool findA1 = false;
 
       for (int i = 0; i < 100; i++)
       {
-        result = FormMain.GenerateRandomNumber(0, 4);
+        result = FormMain.GenerateRandomNumber(1, 4);
         if (result == 1)
         {
           findA1 = true;
@@ -74,11 +74,11 @@ namespace UnitTestProjectApplication
     [TestMethod]
     public void TestGenerateRandomNumberEqualTo4()
     {
-      int result = FormMain.GenerateRandomNumber(0, 5);
+      int result = FormMain.GenerateRandomNumber(1, 4);
       bool findA4 = false;
       for (int i = 0; i < 100; i++)
       {
-        result = FormMain.GenerateRandomNumber(0, 5);
+        result = FormMain.GenerateRandomNumber(1, 4);
         if (result == 4)
         {
           findA4 = true;

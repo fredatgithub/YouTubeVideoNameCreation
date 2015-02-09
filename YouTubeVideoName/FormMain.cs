@@ -51,22 +51,22 @@ namespace YouTubeVideoName
       while (count < videoNameLength)
       {
         // choosing letters or number
-        choiceLetters = GenerateRandomNumber(0, 5);
+        choiceLetters = GenerateRandomNumber(1, 4);
         switch (choiceLetters)
         {
           case 1:
             //abcdefghijklmnopqrstuvwxyz
             //12345678901234567890123456
-            name += lettersLower[GenerateRandomNumber(0, 26)];
+            name += lettersLower[GenerateRandomNumber(0, 25)];
             break;
           case 2:
-            name += lettersUpper[GenerateRandomNumber(0, 26)];
+            name += lettersUpper[GenerateRandomNumber(0, 25)];
             break;
           case 3:
             name += chiffres[GenerateRandomNumber(0, 9)];
             break;
           case 4:
-            name += specialCharacters[GenerateRandomNumber(0, 2)];
+            name += specialCharacters[GenerateRandomNumber(0, 1)];
             break;
         }
 
@@ -90,7 +90,7 @@ namespace YouTubeVideoName
       {
         crypto.GetBytes(randomNumber);
         result = randomNumber[0];
-      } while (result <= min || result >= max);
+      } while (result < min || result > max);
 
       return result;
     }
