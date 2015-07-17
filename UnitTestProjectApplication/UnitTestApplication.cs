@@ -16,12 +16,22 @@ namespace UnitTestProjectApplication
     }
 
     [TestMethod]
+    public void TestGenerateRandomNumber_within_several_range()
+    {
+      for (int i = 10; i < 240; i++)
+      {
+        int result = FormMain.GenerateRandomNumber(i, i + 10);
+        Assert.IsTrue(result >= i && result <= i + 10);
+      }
+    }
+
+    [TestMethod]
     public void TestGenerateRandomNumber_not_outside_range()
     {
       for (int i = 0; i < 100; i++)
       {
         int result = FormMain.GenerateRandomNumber(1, 4);
-        Assert.IsFalse(result >= 4);
+        Assert.IsFalse(result > 4);
       }
     }
 
@@ -45,7 +55,7 @@ namespace UnitTestProjectApplication
     public void TestGenerateRandomNumberEqualTo2()
     {
       bool findTwo = false;
-      for (int i = 0; i < 10; i++)
+      for (int i = 0; i < 100; i++)
       {
         int result = FormMain.GenerateRandomNumber(1, 4);
         if (result == 2)
