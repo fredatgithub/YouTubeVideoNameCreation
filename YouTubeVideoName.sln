@@ -1,24 +1,60 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouTubeVideoName", "YouTubeVideoName\YouTubeVideoName.csproj", "{FA4D13C2-8F14-498B-8E15-E4656E7CA371}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProjectApplication", "UnitTestProjectApplication\UnitTestProjectApplication.csproj", "{6F68D500-A971-4AC6-8EE5-0A0EECBAD49C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationUsage", "ApplicationUsage\ApplicationUsage.csproj", "{C0FAB116-FD8E-47DF-AD50-2E1C602DD817}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FA4D13C2-8F14-498B-8E15-E4656E7CA371}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FA4D13C2-8F14-498B-8E15-E4656E7CA371}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA4D13C2-8F14-498B-8E15-E4656E7CA371}.Debug|x64.ActiveCfg = Debug|x64
+		{FA4D13C2-8F14-498B-8E15-E4656E7CA371}.Debug|x64.Build.0 = Debug|x64
+		{FA4D13C2-8F14-498B-8E15-E4656E7CA371}.Debug|x86.ActiveCfg = Debug|x86
+		{FA4D13C2-8F14-498B-8E15-E4656E7CA371}.Debug|x86.Build.0 = Debug|x86
 		{FA4D13C2-8F14-498B-8E15-E4656E7CA371}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA4D13C2-8F14-498B-8E15-E4656E7CA371}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA4D13C2-8F14-498B-8E15-E4656E7CA371}.Release|x64.ActiveCfg = Release|x64
+		{FA4D13C2-8F14-498B-8E15-E4656E7CA371}.Release|x64.Build.0 = Release|x64
+		{FA4D13C2-8F14-498B-8E15-E4656E7CA371}.Release|x86.ActiveCfg = Release|x86
+		{FA4D13C2-8F14-498B-8E15-E4656E7CA371}.Release|x86.Build.0 = Release|x86
 		{6F68D500-A971-4AC6-8EE5-0A0EECBAD49C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6F68D500-A971-4AC6-8EE5-0A0EECBAD49C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F68D500-A971-4AC6-8EE5-0A0EECBAD49C}.Debug|x64.ActiveCfg = Debug|x64
+		{6F68D500-A971-4AC6-8EE5-0A0EECBAD49C}.Debug|x64.Build.0 = Debug|x64
+		{6F68D500-A971-4AC6-8EE5-0A0EECBAD49C}.Debug|x86.ActiveCfg = Debug|x86
+		{6F68D500-A971-4AC6-8EE5-0A0EECBAD49C}.Debug|x86.Build.0 = Debug|x86
 		{6F68D500-A971-4AC6-8EE5-0A0EECBAD49C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F68D500-A971-4AC6-8EE5-0A0EECBAD49C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F68D500-A971-4AC6-8EE5-0A0EECBAD49C}.Release|x64.ActiveCfg = Release|x64
+		{6F68D500-A971-4AC6-8EE5-0A0EECBAD49C}.Release|x64.Build.0 = Release|x64
+		{6F68D500-A971-4AC6-8EE5-0A0EECBAD49C}.Release|x86.ActiveCfg = Release|x86
+		{6F68D500-A971-4AC6-8EE5-0A0EECBAD49C}.Release|x86.Build.0 = Release|x86
+		{C0FAB116-FD8E-47DF-AD50-2E1C602DD817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0FAB116-FD8E-47DF-AD50-2E1C602DD817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0FAB116-FD8E-47DF-AD50-2E1C602DD817}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C0FAB116-FD8E-47DF-AD50-2E1C602DD817}.Debug|x64.Build.0 = Debug|Any CPU
+		{C0FAB116-FD8E-47DF-AD50-2E1C602DD817}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C0FAB116-FD8E-47DF-AD50-2E1C602DD817}.Debug|x86.Build.0 = Debug|Any CPU
+		{C0FAB116-FD8E-47DF-AD50-2E1C602DD817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0FAB116-FD8E-47DF-AD50-2E1C602DD817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0FAB116-FD8E-47DF-AD50-2E1C602DD817}.Release|x64.ActiveCfg = Release|Any CPU
+		{C0FAB116-FD8E-47DF-AD50-2E1C602DD817}.Release|x64.Build.0 = Release|Any CPU
+		{C0FAB116-FD8E-47DF-AD50-2E1C602DD817}.Release|x86.ActiveCfg = Release|Any CPU
+		{C0FAB116-FD8E-47DF-AD50-2E1C602DD817}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

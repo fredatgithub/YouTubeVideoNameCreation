@@ -6,86 +6,87 @@ namespace UnitTestProjectApplication
   public class UnitTestApplication
   {
     [TestMethod]
-    public void TestGenerateRandomNumber()
+    public void TestGenerateRandomNumber_within_range()
     {
-      int result = FormMain.GenerateRandomNumber(1, 4);
       for (int i = 0; i < 10; i++)
       {
-        result = FormMain.GenerateRandomNumber(1, 4);
+        int result = FormMain.GenerateRandomNumber(1, 4);
         Assert.IsTrue(result >= 1 && result <= 4);
       }
+    }
 
-      result = FormMain.GenerateRandomNumber(1, 4);
-      Assert.IsFalse(result >= 4);
+    [TestMethod]
+    public void TestGenerateRandomNumber_not_outside_range()
+    {
+      for (int i = 0; i < 100; i++)
+      {
+        int result = FormMain.GenerateRandomNumber(1, 4);
+        Assert.IsFalse(result >= 4);
+      }
     }
 
     [TestMethod]
     public void TestGenerateRandomNumberEqualTo1()
     {
-      int result = FormMain.GenerateRandomNumber(1, 4);
-      bool findA1 = false;
-
+      bool findOne = false;
       for (int i = 0; i < 100; i++)
       {
-        result = FormMain.GenerateRandomNumber(1, 4);
+        int result = FormMain.GenerateRandomNumber(1, 4);
         if (result == 1)
         {
-          findA1 = true;
+          findOne = true;
         }
       }
 
-      Assert.IsTrue(findA1);
+      Assert.IsTrue(findOne);
     }
 
     [TestMethod]
     public void TestGenerateRandomNumberEqualTo2()
     {
-      int result = FormMain.GenerateRandomNumber(1, 4);
-      bool findA2 = false;
+      bool findTwo = false;
       for (int i = 0; i < 10; i++)
       {
-        result = FormMain.GenerateRandomNumber(1, 4);
+        int result = FormMain.GenerateRandomNumber(1, 4);
         if (result == 2)
         {
-          findA2 = true;
+          findTwo = true;
         }
       }
 
-      Assert.IsTrue(findA2);
+      Assert.IsTrue(findTwo);
     }
 
     [TestMethod]
     public void TestGenerateRandomNumberEqualTo3()
     {
-      int result = FormMain.GenerateRandomNumber(1, 4);
-      bool findA3 = false;
+      bool findThree = false;
       for (int i = 0; i < 10; i++)
       {
-        result = FormMain.GenerateRandomNumber(1, 4);
+        int result = FormMain.GenerateRandomNumber(1, 4);
         if (result == 3)
         {
-          findA3 = true;
+          findThree = true;
         }
       }
 
-      Assert.IsTrue(findA3);
+      Assert.IsTrue(findThree);
     }
 
     [TestMethod]
     public void TestGenerateRandomNumberEqualTo4()
     {
-      int result = FormMain.GenerateRandomNumber(1, 4);
-      bool findA4 = false;
+      bool findFour = false;
       for (int i = 0; i < 100; i++)
       {
-        result = FormMain.GenerateRandomNumber(1, 4);
+        int result = FormMain.GenerateRandomNumber(1, 4);
         if (result == 4)
         {
-          findA4 = true;
+          findFour = true;
         }
       }
 
-      Assert.IsTrue(findA4);
+      Assert.IsTrue(findFour);
     }
 
     [TestMethod]
