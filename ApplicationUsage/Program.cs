@@ -6,13 +6,16 @@ namespace ApplicationUsage
   {
     static void Main()
     {
-      Action<string> Display = s => Console.WriteLine(s);
-      Action<string> DisplayWithoutCR = s => Console.Write(s);
-       for (int i = 0; i < 900; i++)
+      Action<string> display = Console.WriteLine;
+      Action<string> displayWithoutCr = Console.Write;
+      for (int i = 0; i < 900; i++)
       {
         int result = FormMain.GenerateRandomNumber(1, 9);
-        DisplayWithoutCR(result + " ");
+        displayWithoutCr(result + " ");
       }
+
+      display("");
+      display("Press a key to exit:");
       Console.ReadKey();
     }
   }

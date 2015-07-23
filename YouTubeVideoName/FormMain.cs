@@ -47,11 +47,10 @@ namespace YouTubeVideoName
       const byte videoNameLength = 11;
       int count = 0;
       string name = string.Empty;
-      int choiceLetters = GenerateRandomNumber(1, 4);
       while (count < videoNameLength)
       {
         // choosing letters or number
-        choiceLetters = GenerateRandomNumber(1, 4);
+        int choiceLetters = GenerateRandomNumber(1, 4);
         switch (choiceLetters)
         {
           case 1:
