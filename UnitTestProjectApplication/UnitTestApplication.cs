@@ -71,7 +71,7 @@ namespace UnitTestProjectApplication
     public void TestGenerateRandomNumberEqualTo3()
     {
       bool findThree = false;
-      for (int i = 0; i < 10; i++)
+      for (int i = 0; i < 100; i++)
       {
         int result = FormMain.GenerateRandomNumber(1, 4);
         if (result == 3)
@@ -89,7 +89,7 @@ namespace UnitTestProjectApplication
       bool findFour = false;
       for (int i = 0; i < 100; i++)
       {
-        int result = FormMain.GenerateRandomNumber(1, 4);
+        int result = FormMain.GenerateRandomNumber(1, 5);
         if (result == 4)
         {
           findFour = true;
