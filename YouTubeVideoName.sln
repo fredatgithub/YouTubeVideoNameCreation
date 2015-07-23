@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.22823.1
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouTubeVideoName", "YouTubeVideoName\YouTubeVideoName.csproj", "{FA4D13C2-8F14-498B-8E15-E4656E7CA371}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProjectApplication", "UnitTestProjectApplication\UnitTestProjectApplication.csproj", "{6F68D500-A971-4AC6-8EE5-0A0EECBAD49C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationUsage", "ApplicationUsage\ApplicationUsage.csproj", "{C0FAB116-FD8E-47DF-AD50-2E1C602DD817}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetectCollisions", "DetectCollisions\DetectCollisions.csproj", "{55520AE5-7124-40DB-A94B-04714227306E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,18 @@ Global
 		{C0FAB116-FD8E-47DF-AD50-2E1C602DD817}.Release|x64.Build.0 = Release|Any CPU
 		{C0FAB116-FD8E-47DF-AD50-2E1C602DD817}.Release|x86.ActiveCfg = Release|Any CPU
 		{C0FAB116-FD8E-47DF-AD50-2E1C602DD817}.Release|x86.Build.0 = Release|Any CPU
+		{55520AE5-7124-40DB-A94B-04714227306E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55520AE5-7124-40DB-A94B-04714227306E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55520AE5-7124-40DB-A94B-04714227306E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{55520AE5-7124-40DB-A94B-04714227306E}.Debug|x64.Build.0 = Debug|Any CPU
+		{55520AE5-7124-40DB-A94B-04714227306E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{55520AE5-7124-40DB-A94B-04714227306E}.Debug|x86.Build.0 = Debug|Any CPU
+		{55520AE5-7124-40DB-A94B-04714227306E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55520AE5-7124-40DB-A94B-04714227306E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55520AE5-7124-40DB-A94B-04714227306E}.Release|x64.ActiveCfg = Release|Any CPU
+		{55520AE5-7124-40DB-A94B-04714227306E}.Release|x64.Build.0 = Release|Any CPU
+		{55520AE5-7124-40DB-A94B-04714227306E}.Release|x86.ActiveCfg = Release|Any CPU
+		{55520AE5-7124-40DB-A94B-04714227306E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

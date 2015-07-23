@@ -20,24 +20,56 @@ SOFTWARE.
 using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
-using System.Windows.Forms;
+using YouTubeVideoName;
 
-namespace YouTubeVideoName
+namespace DetectCollisions
 {
-  public partial class FormMain : Form
+  class Program
   {
-    public FormMain()
+    static void Main()
     {
-      InitializeComponent();
-    }
-
-    private void buttonCompute_Click(object sender, EventArgs e)
-    {
-      listBox1.Items.Clear();
-      for (int i = 1; i < 59; i++)
+      Action<string> display = Console.WriteLine;
+      Action<string> displayWithoutCr = Console.Write;
+      ulong counter = 0;
+      bool collisionfound = false;
+      string source = CreateName();
+      for (int i = 0; i < 20; i++)
       {
-        listBox1.Items.Add(CreateName());
+        string collision = CreateName();
+        display(source + " " + counter +  " = " + collision);
+        if (collision == source)
+        {
+          collisionfound = true;
+        }
+
+        if (collisionfound)
+        {
+          break;
+        }
+
+        counter++;
       }
+
+      while (!collisionfound)
+      {
+        string collision = CreateName();
+        display(source + " " + counter + " = " + collision);
+        if (collision == source)
+        {
+          collisionfound = true;
+        }
+
+        if (collisionfound)
+        {
+          break;
+        }
+
+        counter++;
+      }
+
+      display("");
+      display("Press a key to exit:");
+      Console.ReadKey();
     }
 
     public static string CreateName()
