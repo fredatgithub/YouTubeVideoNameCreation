@@ -1,0 +1,5 @@
+language: csharp
+solution: YouTubeVideoNameCreation.sln
+notifications:
+  email: false
+  
