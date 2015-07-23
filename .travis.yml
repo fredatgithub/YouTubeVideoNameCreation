@@ -1,6 +1,6 @@
 sudo: false
 language: csharp
-solution: YouTubeVideoNameCreation.sln
+solution: YouTubeVideoName.sln
 notifications:
   email: false
   
