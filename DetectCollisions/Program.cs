@@ -53,7 +53,7 @@ namespace DetectCollisions
       while (!collisionfound)
       {
         string collision = CreateName();
-        display("The source " + source + " has not collided in " + counter + " loops with this one: " + collision);
+        display(string.Format("The source {0} has not collided in {1} loops with this one: {2}", source, counter, collision));
         if (collision == source)
         {
           collisionfound = true;
