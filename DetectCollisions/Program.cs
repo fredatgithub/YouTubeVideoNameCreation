@@ -53,15 +53,10 @@ namespace DetectCollisions
       while (!collisionfound)
       {
         string collision = CreateName();
-        display(source + " " + counter + " = " + collision);
+        display("The source " + source + " has not collided in " + counter + " loops with this one: " + collision);
         if (collision == source)
         {
           collisionfound = true;
-        }
-
-        if (collisionfound)
-        {
-          break;
         }
 
         counter++;
