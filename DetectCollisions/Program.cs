@@ -36,7 +36,7 @@ namespace DetectCollisions
       for (int i = 0; i < 20; i++)
       {
         string collision = CreateName();
-        display(source + " " + counter +  " = " + collision);
+        display(string.Format("The source {0} has not collided in {1} loops with this one: {2}", source, counter, collision));
         if (collision == source)
         {
           collisionfound = true;
@@ -59,8 +59,19 @@ namespace DetectCollisions
           collisionfound = true;
         }
 
-        counter++;
+        if (counter < ulong.MaxValue)
+        {
+          counter++;
+        }
+        else
+        {
+          break;
+        }
       }
+
+      display(collisionfound
+        ? string.Format("The source has collided after {0} generations", counter)
+        : string.Format("The source has not collided after {0} generations", ulong.MaxValue));
 
       display("");
       display("Press a key to exit:");
