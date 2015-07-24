@@ -21,6 +21,7 @@ SOFTWARE.
 using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using System.Threading.Tasks;
 
 namespace DetectCollisions
 {
@@ -33,6 +34,7 @@ namespace DetectCollisions
       ulong counter = 0;
       bool collisionfound = false;
       string source = CreateName();
+      // To first test
       for (int i = 0; i < 5; i++)
       {
         string collision = CreateName();
@@ -50,24 +52,37 @@ namespace DetectCollisions
         counter++;
       }
 
-      while (!collisionfound)
-      {
-        string collision = CreateName();
-        display(string.Format("The source {0} has not collided in {1:n0} loops with this one: {2}", source, counter, collision));
-        if (collision == source)
-        {
-          collisionfound = true;
-        }
+      // final search method
+      //while (!collisionfound)
+      //{
+      //  string collision = CreateName();
+      //  display(string.Format("The source {0} has not collided in {1:n0} loops with this one: {2}", source, counter, collision));
+      //  if (collision == source)
+      //  {
+      //    collisionfound = true;
+      //  }
 
-        if (counter < ulong.MaxValue)
+      //  if (counter < ulong.MaxValue)
+      //  {
+      //    counter++;
+      //  }
+      //  else
+      //  {
+      //    break;
+      //  }
+      //}
+
+      // optimized method with ParallelFor
+      const long start = 0; //long.MinValue;
+      const long end = long.MaxValue;
+      ulong counter3 = 0;
+      Parallel.For(start, end, delegate (long counter2)
         {
-          counter++;
-        }
-        else
-        {
-          break;
-        }
-      }
+          string collision = CreateName();
+          counter3++;
+          display(string.Format("The source {0} has not collided in {1:n0} loops with this one: {2}", source, counter3, collision));
+          if (collision == source) collisionfound = true;
+        });
 
       display(collisionfound
         ? string.Format("The source has collided after {0} generations", counter)
