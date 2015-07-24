@@ -17,10 +17,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
+
 using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
-using YouTubeVideoName;
 
 namespace DetectCollisions
 {
@@ -33,7 +33,7 @@ namespace DetectCollisions
       ulong counter = 0;
       bool collisionfound = false;
       string source = CreateName();
-      for (int i = 0; i < 20; i++)
+      for (int i = 0; i < 5; i++)
       {
         string collision = CreateName();
         display(string.Format("The source {0} has not collided in {1} loops with this one: {2}", source, counter, collision));
@@ -53,7 +53,7 @@ namespace DetectCollisions
       while (!collisionfound)
       {
         string collision = CreateName();
-        display(string.Format("The source {0} has not collided in {1} loops with this one: {2}", source, counter, collision));
+        display(string.Format("The source {0} has not collided in {1:n0} loops with this one: {2}", source, counter, collision));
         if (collision == source)
         {
           collisionfound = true;
