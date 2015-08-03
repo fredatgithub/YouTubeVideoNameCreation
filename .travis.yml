@@ -1,6 +1,8 @@
 sudo: false
 language: csharp
 solution: YouTubeVideoName.sln
+script:
+  - xbuild /p:Configuration=Release YouTubeVideoName/YouTubeVideoName.csproj
 notifications:
   email: false
   
